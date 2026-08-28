@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Javascript Dasar</title>
+</head>
+<body>
+    
+    <script>
+        // 1. Input Nilai Mapel 1
+        let nilai1 = Number(prompt("Masukkan nilai Mapel 1:"));
+        confirm(`Apakah nilai Mapel 1 (${nilai1}) sudah benar?`);
+
+        // 2. Input Nilai Mapel 2
+        let nilai2 = Number(prompt("Masukkan nilai Mapel 2:"));
+        confirm(`Apakah nilai Mapel 2 (${nilai2}) sudah benar?`);
+
+        // 3. Input Nilai Mapel 3
+        let nilai3 = Number(prompt("Masukkan nilai Mapel 3:"));
+        confirm(`Apakah nilai Mapel 3 (${nilai3}) sudah benar?`);
+
+        // 4. Input Nilai Mapel 4
+        let nilai4 = Number(prompt("Masukkan nilai Mapel 4:"));
+        confirm(`Apakah nilai Mapel 4 (${nilai4}) sudah benar?`);
+
+        // 5. Popup proses setelah mapel terakhir
+        alert("Sistem sedang memproses nilai...");
+
+        // 6. Jumlahkan seluruh nilai
+        let totalNilai = nilai1 + nilai2 + nilai3 + nilai4;
+        let grade = "";
+
+        // 7. Pengkondisian if-else untuk menentukan huruf nilai
+        if (totalNilai > 380) {
+            grade = "A";
+        } else if (totalNilai > 360) {
+            grade = "B";
+        } else if (totalNilai > 340) {
+            grade = "C";
+        } else if (totalNilai > 320) {
+            grade = "D";
+        } else {
+            grade = "E";
+        }
+
+        // 8. Pengkondisian untuk menentukan keterangan kelulusan
+        let keterangan = "";
+        if (grade === "A" || grade === "B") {
+            keterangan = "Selamat Anda Lulus";
+        } else if (grade === "C" || grade === "D") {
+            keterangan = "Anda harus remidi";
+        } else {
+            keterangan = "Anda belum lulus";
+        }
+
+        // 9. Tampilkan hasil akhir
+        alert(`Total Nilai: ${totalNilai}\nHuruf Nilai: ${grade}`);
+    </script>
+</body>
+</html>
